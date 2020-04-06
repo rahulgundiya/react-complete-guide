@@ -10,10 +10,23 @@ state = {
     name:"Max" , age:28 } ,
     {name:"Menu" , age:30} ,
     {name:"Staphanie"  , age:35}
-  ]
+  ] ,
+
+otherState:'some other value'
 }
 switchNameHandler=()=>{
   console.log("Was clicked");
+
+  this.setState({
+    persons: [{
+      name:"Maxmilan" , age:40 } ,
+      {name:"Manoj" , age:25} ,
+      {name:"Staphanie"  , age:35}
+      
+    ]
+   
+  })
+
 }
 
   render()
