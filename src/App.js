@@ -12,6 +12,9 @@ state = {
     {name:"Staphanie"  , age:35}
   ]
 }
+switchNameHandler=()=>{
+  console.log("Was clicked");
+}
 
   render()
   {
@@ -20,7 +23,7 @@ state = {
 
       <h1>hi ,I'm react app</h1>
      <p>This is really Work..!!!</p>
-     <button>Switch-Name</button>
+     <button onClick ={this.switchNameHandler}>Switch-Name</button>
     
      <div>
      <Person name= { this.state.persons[0].name } age= {this.state.persons[0].age }  / >
