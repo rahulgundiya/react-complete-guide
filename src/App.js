@@ -1,26 +1,44 @@
-import React from 'react';
-import logo from './logo.svg';
+//import React from 'react';
+import React , {Component} from 'react';
+//import logo from './logo.svg';
 import './App.css';
+import Person from './Person/Person';
 
-function App() {
+class App extends Component {
+state = {
+  persons:[ {
+    name:"Max" , age:28 } ,
+    {name:"Menu" , age:30} ,
+    {name:"Staphanie"  , age:35}
+  ]
+}
+
+  render()
+  {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <h1>hi ,I'm react app</h1>
+     <p>This is really Work..!!!</p>
+     <button>Switch-Name</button>
+    
+     <div>
+     <Person name= { this.state.persons[0].name } age= {this.state.persons[0].age }  / >
+       </div>
+       <div>
+     <Person name= { this.state.persons[1].name } age= {this.state.persons[1].age } >My Hobbies:Racing </Person>
+     </div>
+     <div>
+     <Person name= { this.state.persons[2].name } age= {this.state.persons[2].age }  />
+
     </div>
+    </div>
+    
+  
   );
-}
+  }
+  }
+
+ 
 
 export default App;
