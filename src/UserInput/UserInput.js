@@ -7,7 +7,6 @@ const userInput=(props)=>{
          border:'2px solid red',
          width:'16%' ,
          height: '30px' ,
-
          textAlign : 'center'
     }
     return <input type="text" 
