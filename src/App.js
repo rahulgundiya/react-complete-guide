@@ -60,16 +60,12 @@ togglePersonsHandler=()=>{
   padding :'8px' ,
   cursor :'pointer'
     }
-  return (
-    <div className="App">
+let persons =null ;
+if(this.state.showPersons)
+{
+ persons=( 
 
-      <h1>hi ,I'm react app</h1>
-     <p>This is really Work..!!!</p>
-     <button style ={style} onClick ={this.togglePersonsHandler}>Switch-Name</button>
-   
-   {
-     this.state.showPersons===true ?
-    <div>
+<div>
      
      <Person name= { this.state.persons[0].name } age= {this.state.persons[0].age }  / >
        
@@ -79,8 +75,20 @@ togglePersonsHandler=()=>{
      
      <Person name= { this.state.persons[2].name } age= {this.state.persons[2].age }  />
 
-    </div>  : null
-    }
+    </div> 
+
+ )
+}
+
+  return (
+    <div className="App">
+
+      <h1>hi ,I'm react app</h1>
+     <p>This is really Work..!!!</p>
+     <button style ={style} onClick ={this.togglePersonsHandler}>Switch-Name</button>
+       {persons}  
+   
+    
     </div>
     
   
