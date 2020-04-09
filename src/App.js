@@ -34,17 +34,25 @@ switchNameHandler=(newName)=>{
   })
 
 }
-nameChangedHandler=(event) =>{
- 
+nameChangedHandler=(event , id) =>{
+const personIndex = this.state.persons.findIndex(p=>{
+  return p.id  === id;
+}) 
+
+const person = {
+  ...this.state.persons[personIndex]
+  
+}
+
+person.name = event.target.value;
+const persons = [...this.state.persons] ;
+
+persons[personIndex]=person;
+
+
+
   this.setState({
-    persons: [{
-      name:"Maxmillan" , age:40 } ,
-      {name:event.target.value , age:25} ,
-      {name:"Staphanie"  , age:35}
-      
-    ]
-   
-  })
+    persons: persons })
 }
 
 deletePersonHandler(personIndex) 
@@ -80,6 +88,7 @@ if(this.state.showPersons)
     return <Person name={person.name} age={person.age}
      click ={()=> this.deletePersonHandler(index)}
      key ={person.id}
+     changed = {(event)=>this.nameChangedHandler(event ,person.id)}
     / >
   
   
