@@ -12,9 +12,9 @@ import Person from './Person/Person';
 class App extends Component {
 state = {
   persons:[ {
-    name:"Max" , age:28 } ,
-    {name:"Menu" , age:30} ,
-    {name:"Staphanie"  , age:35}
+   id:"vasb1" , name:"Max" , age:28 } ,
+    { id:"fasd1" , name:"Menu" , age:30} ,
+    {id:"tyhg2" ,name:"Staphanie"  , age:35}
   ] ,
 
 otherState:'some other value' ,
@@ -79,6 +79,7 @@ if(this.state.showPersons)
   {this.state.persons.map((person ,index)=>{
     return <Person name={person.name} age={person.age}
      click ={()=> this.deletePersonHandler(index)}
+     key ={person.id}
     / >
   
   
@@ -93,6 +94,7 @@ if(this.state.showPersons)
 }
 
   return (
+
     <div className="App">
 
       <h1>hi ,I'm react app</h1>
