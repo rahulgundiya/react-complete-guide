@@ -104,12 +104,24 @@ if(this.state.showPersons)
  style.backgroundColor= 'red';
 }
 
+// let classes = ['red' , 'bold'].join(' ');
+const classes = [];
+ if(this.state.persons.length <=2)
+{
+  classes.push('red');   //classes will br red
+}
+
+if(this.state.persons.length <= 1)
+{
+
+  classes.push('bold') //classes will be both red and bold
+}
   return (
 
     <div className="App">
 
       <h1>hi ,I'm react app</h1>
-     <p>This is really Work..!!!</p>
+     <p className ={classes.join(' ')} >This is really Work..!!!</p>
      <button style ={style} onClick ={this.togglePersonsHandler}>Switch-Name</button>
        {persons}  
    
