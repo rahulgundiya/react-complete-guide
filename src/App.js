@@ -1,10 +1,11 @@
 
 //import React from 'react';
 import React , {Component} from 'react';
-import Radium  ,{StyleRoot}from 'radium';
+// import Radium  ,{StyleRoot}from 'radium';
 //import logo from './logo.svg';
 import './App.css';
 import Person from './Person/Person';
+//import styled from 'styled-component';
 //import person from './Person/Person';
 //import UserInput from './UserInput/UserInput';
 //import UserOutput from './UserOutput/UserOutput';
@@ -126,7 +127,7 @@ if(this.state.persons.length <= 1)
   classes.push('bold') //classes will be both red and bold
 }
   return (
-<StyleRoot>
+
     <div className="App">
 
       <h1>hi ,I'm react app</h1>
@@ -136,7 +137,7 @@ if(this.state.persons.length <= 1)
    
     
     </div>
-    </StyleRoot>
+    
   
   );
   }
@@ -144,4 +145,4 @@ if(this.state.persons.length <= 1)
 
  
 
-export default Radium(App);
+export default App;
