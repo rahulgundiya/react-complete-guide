@@ -1,7 +1,7 @@
 
 //import React from 'react';
 import React , {Component} from 'react';
-import Radium from 'radium';
+import Radium  ,{StyleRoot}from 'radium';
 //import logo from './logo.svg';
 import './App.css';
 import Person from './Person/Person';
@@ -126,7 +126,7 @@ if(this.state.persons.length <= 1)
   classes.push('bold') //classes will be both red and bold
 }
   return (
-
+<StyleRoot>
     <div className="App">
 
       <h1>hi ,I'm react app</h1>
@@ -136,7 +136,7 @@ if(this.state.persons.length <= 1)
    
     
     </div>
-    
+    </StyleRoot>
   
   );
   }
