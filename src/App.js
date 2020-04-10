@@ -1,6 +1,7 @@
 
 //import React from 'react';
 import React , {Component} from 'react';
+import Radium from 'radium';
 //import logo from './logo.svg';
 import './App.css';
 import Person from './Person/Person';
@@ -77,7 +78,11 @@ togglePersonsHandler=()=>{
     font : 'inherit' ,
   border : ' 1px solid blue' ,
   padding :'8px' ,
-  cursor :'pointer'
+  cursor :'pointer' ,
+  ':hover':{
+    backgroundColor :'lightgreen' ,
+    color:'black'
+  }
     }
 let persons =null ;
 if(this.state.showPersons)
@@ -102,6 +107,10 @@ if(this.state.showPersons)
 
  )
  style.backgroundColor= 'red';
+ style[':hover']= {
+   backgroundColor:'salmon' ,
+   color :'black'
+ }
 }
 
 // let classes = ['red' , 'bold'].join(' ');
@@ -135,4 +144,4 @@ if(this.state.persons.length <= 1)
 
  
 
-export default App;
+export default Radium(App);
