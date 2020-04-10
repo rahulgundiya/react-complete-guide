@@ -6,7 +6,8 @@ import styled from 'styled-components';
 //Using prop
 
 const StyledDiv =  styled.div`
-  
+   
+
 width:60% ;
 margin : 16px auto ;
 border : 1px solid #eee;
