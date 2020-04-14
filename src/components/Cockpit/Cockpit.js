@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './Cockpit.css';
+import style from './Cockpit.css';
 
 
 
@@ -16,23 +16,15 @@ const cockpit = (props) => {
        
    
     if (props.persons.length <= 2) {
-       // alert("hi")
-       // console.log("p[erson",props.persons)
-       // style = {styleRed}
-    //    let styleRed ={
-    //     color: 'red'
-    //   }
        
-         assignedClasses.push(classes.red);
+       
+         assignedClasses.push(style.red);
 
          console.log('here', assignedClasses) // classes = ['red']
     }
     if (props.persons.length <= 1) {
-        //style = {styleBold}
-        // let styleBold = {
-        //     fontWeight: 'bold'
-        //   }
-         assignedClasses.push(classes.bold); // classes = ['red', 'bold']
+        
+         assignedClasses.push(style.bold); // classes = ['red', 'bold']
     }
 
     return (

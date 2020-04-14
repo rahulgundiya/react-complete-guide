@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import'./App.css';
+import style  from  './App.css';
 import Persons from '../components/Persons/Persons';
 import Cockpit from '../components/Cockpit/Cockpit';
 
@@ -63,7 +63,7 @@ class App extends Component {
     }
 
     return (
-      <div className="App">
+      <div className = {style.App}>
         <Cockpit
           title={this.props.appTitle}
           showPersons={this.state.showPersons}
