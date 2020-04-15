@@ -7,10 +7,11 @@ const Cockpit = ( props ) => {
   useEffect (()=>{
         console.log('[Cockpit.js] useEffect');
   //Http request
-  setTimeout(() =>{
+  const timer = setTimeout(() =>{
 alert('Data Saved From Colud..!')
-  } ,1000 );
+  } , 1000);
   return ()=>{
+      clearTimeout(timer);
       console.log('[cockpit.js] cleanup work in useEffect');
   }
  
