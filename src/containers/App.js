@@ -106,7 +106,7 @@ componentDidUpdate()
           showPersons={this.state.showPersons}
           persons={this.state.persons}
           clicked={this.togglePersonsHandler}
-        /> : null }
+        />        : null }
         {persons}
       </div>
     );
