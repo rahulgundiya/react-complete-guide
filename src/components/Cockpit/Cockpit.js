@@ -31,12 +31,12 @@ useEffect (() =>{
         btnClass = classes.Red;
     }
 
-    if ( props.persons.length <= 2 ) {
+    if ( props.personsLength <= 2 ) {
       assignedClasses.push( classes.red );
        // classes = ['red']
        console.log('here data' , assignedClasses);
     }
-    if ( props.persons.length <= 1 ) {
+    if ( props.personsLength <= 1 ) {
 
       assignedClasses.push( classes.bold ); // classes = ['red', 'bold']
     }
@@ -52,4 +52,4 @@ useEffect (() =>{
     );
 };
 
-export default Cockpit;
+export default React.memo(Cockpit);
