@@ -7,8 +7,11 @@ const Cockpit = ( props ) => {
   useEffect (()=>{
         console.log('[Cockpit.js] useEffect');
   //Http request
+  setTimeout(() =>{
+alert('Data Saved From Colud..!')
+  } ,1000 )
  
-});
+}  ,[]);
     const assignedClasses = [];
     let btnClass = '';
     if (props.showPersons) {
