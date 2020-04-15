@@ -32,10 +32,10 @@ static componentDidMount()
 {
   console.log('[App.js] componentDidMount...');
 }
-static componentWillMount()
-{
-  console.log('[App.js] componentWillMount...');
-}
+// static componentWillMount()
+// {
+//   console.log('[App.js] componentWillMount...');
+// }
 
   nameChangedHandler = (event, id) => {
     const personIndex = this.state.persons.findIndex(p => {
