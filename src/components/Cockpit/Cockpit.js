@@ -9,9 +9,21 @@ const Cockpit = ( props ) => {
   //Http request
   setTimeout(() =>{
 alert('Data Saved From Colud..!')
-  } ,1000 )
+  } ,1000 );
+  return ()=>{
+      console.log('[cockpit.js] cleanup work in useEffect');
+  }
  
 }  ,[]);
+
+
+useEffect (() =>{
+    console.log('[Cockpit.js]in 2nd useEffect');
+    return ()=>{
+        console.log('[Cockpit.js] cleanup work in 2nd useEffect');
+    }
+   
+});
     const assignedClasses = [];
     let btnClass = '';
     if (props.showPersons) {
