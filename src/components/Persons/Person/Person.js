@@ -7,15 +7,17 @@ render()
 { 
  console.log('[Person.js] rendering....');
   return ( 
-    <Fragment>
+     <Fragment>
+    
       <p key ="i1" onClick={this.props.click}>
         I'm {this.props.name} and I am {this.props.age} years old!
-      </p> ,
-      <p key = "i2" >  {this.props.children}</p> ,
+      </p>
+      <p key = "i2" >  {this.props.children}</p>
       <input type="text" key ="i3" 
        onChange={this.props.changed}
         value={this.props.name} />
-   </Fragment>
+        
+    </Fragment>
   )
 };
 }
