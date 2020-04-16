@@ -6,6 +6,21 @@ import classes from './Person.module.css';
 import PropTypes from 'prop-types';
 
 class  Person  extends Component  {
+  constructor(props)
+  {
+    super(props)
+this.inputElementRef = React.createRef();
+    
+  }
+  componentDidMount(){
+    //document.querySelector('input').focus();
+//Another-Way to Select the  input
+//this.inputElement.focus();
+//Third another-way
+this.inputElementRef.current.focus();
+
+
+  }
 render()
 { 
  console.log('[Person.js] rendering....');
@@ -16,6 +31,8 @@ render()
       </p>
       <p key = "i2" >  {this.props.children}</p>
       <input type="text" key ="i3" 
+     // ref = { (inputEl)=>{this.inputElement=inputEl}}
+     ref = {this.inputElementRef}
        onChange={this.props.changed}
         value={this.props.name} />
         
