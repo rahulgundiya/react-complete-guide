@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import classes from  './App.module.css';
 import Persons from '../components/Persons/Persons';
 import Cockpit from '../components/Cockpit/Cockpit';
-import WithClass from '../hoc/WithClass';
+import withClass from '../hoc/withClass';
+import ReactAux from '../hoc/ReactAux'
 
 class App extends Component {
   constructor(props)
@@ -96,25 +97,26 @@ componentDidUpdate()
     }
 
     return (
-      <WithClass classes = {classes.App}>
-        <button 
+      <ReactAux> 
+     <button 
         onClick = {()=>{this.setState({showCockpit:false})} }>
           Cockpit-Remove
-          </button>
-          { this.state.showCockpit ? <Cockpit
-          title={this.props.appTitle}
-          showPersons={this.state.showPersons}
-          personsLength={this.state.persons.length}
-          clicked={this.togglePersonsHandler}
-        />        : null }
+      </button>
+       { this.state.showCockpit ? <Cockpit
+        title={this.props.appTitle}
+        showPersons={this.state.showPersons}
+        personsLength={this.state.persons.length}
+        clicked={this.togglePersonsHandler}
+        /> : null }
         {persons}
-      </WithClass>
+    
+      </ReactAux> 
     );
     // return React.createElement('div', {className: 'App'}, React.createElement('h1', null, 'Does this work now?'));
   }
 } 
 
-export default App;
+export default withClass( App , classes.App);
 
 
 
