@@ -26,6 +26,7 @@ render()
  console.log('[Person.js] rendering....');
   return ( 
      <ReactAux>
+       {this.props.isAuth ? <p>Authenticated</p> :<p>Please Login </p>} 
       <p key ="i1" onClick={this.props.click}>
         I'm {this.props.name} and I am {this.props.age} years old!
       </p>

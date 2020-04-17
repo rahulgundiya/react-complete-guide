@@ -52,6 +52,7 @@ useEffect (() =>{
                 className={btnClass}
                 ref={toggleBtnRef}
                 onClick={props.clicked}>Toggle Persons</button>
+                <button onClick={props.login}>Login</button>
         </div>
     );
 };
